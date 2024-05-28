@@ -1,8 +1,10 @@
-export default function createReportObject(employeesList) {
-  return {
-    allEmployees: {
-      ...employeesList,
-    },
-    getNumberOfDepartments: (employeesList) => Object.keys(employeesList).length,
-  };
+export default function createIteratorObject(report) {
+  let allEmployees = [];
+  for (const item of Object.values(report.allEmployees)) {
+    allEmployees = [
+      ...allEmployees,
+      ...item,
+    ];
+  }
+  return allEmployees;
 }
