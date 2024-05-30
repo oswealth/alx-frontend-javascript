@@ -1,4 +1,3 @@
-
 class Building {
   constructor(sqft) {
     if (this.constructor !== Building && this.evacuationWarningMessage === undefined) {
